@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/jsx-wrap-multiplines": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
+  }
+}
