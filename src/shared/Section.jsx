@@ -4,8 +4,10 @@ import styled from 'styled-components';
 
 const Container = styled.section`
   display: flex;
+  justify-content: center;
   padding: 8rem;
   ${props => !props.fullWidth && props.theme.container};
+  width: 100%;
 `;
 
 const Section = ({ children, className, fullWidth }) => {

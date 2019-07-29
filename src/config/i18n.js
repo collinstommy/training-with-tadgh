@@ -41,5 +41,41 @@ export default {
     ctaText: 'Start Today',
     backgroundImage:
       'https://res.cloudinary.com/dmfebxjzk/image/upload/v1564129023/tadgh%20website/running.jpg'
+  },
+  bio: {
+    image: 'https://res.cloudinary.com/dmfebxjzk/image/upload/v1564431452/tadgh%20website/bio.jpg',
+  },
+  pricing: {
+    packages: [{
+      title: 'Bronze',
+      price: 240,
+      details: [
+        '1 Sessions per week',
+        'Nutrition Program',
+        'App Access'
+      ]
+    }, {
+      title: 'Silver',
+      price: 410,
+      details: [
+        '2 Sessions per week',
+        'Nutrition Program',
+        'App Access'
+      ]
+    }, {
+      title: 'Gold',
+      price: 540,
+      details: [
+        '3 Sessions per week',
+        'Nutrition Program',
+        'App Access'
+      ]
+    }
+    ]
+  },
+  team: {
+    heading: 'Team Training Available',
+    body: 'I work with teams including Mallow Footballers to build strength and conditioning. Contact me directly for quotes and a free consultation.',
+    ctaText: 'Find out more'
   }
 };

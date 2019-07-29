@@ -5,6 +5,9 @@ import Layout from '../components/Layout';
 import Programs from '../components/Programs';
 import FullWidthCta from '../shared/FullWidthCta';
 import i18n from '../config/i18n';
+import Bio from '../components/Bio';
+import Pricing from '../components/Pricing';
+import Team from '../components/Team';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,6 +24,9 @@ export default () => (
       <Hero />
       <Programs />
       <FullWidthCta {...i18n.startTodayCta} />
+      <Bio />
+      <Pricing />
+      <Team />
     </Wrapper>
   </Layout>
 );

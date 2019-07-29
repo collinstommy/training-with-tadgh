@@ -11,6 +11,11 @@ const primaryStyles = css`
   border: none;
 `;
 
+const tertiaryStyles = css`
+  color: ${props => props.theme.darkest};
+  border: 2px solid ${props => props.theme.primary};
+`;
+
 const Content = styled.button`
   font-size: 1.5rem;
   padding: 1.5rem 2.5rem;
@@ -23,6 +28,7 @@ const Content = styled.button`
 
   ${props => props.type === 'secondary' && secondaryStyles};
   ${props => props.type === 'primary' && primaryStyles};
+  ${props => props.type === 'tertiary' && tertiaryStyles};
 `;
 
 const Cta = ({ text, children, ...props }) => (
@@ -31,3 +37,4 @@ const Cta = ({ text, children, ...props }) => (
 
 export const PrimaryCta = props => <Cta {...props} type="primary" />;
 export const SecondaryCta = props => <Cta {...props} type="secondary" />;
+export const TertiaryCta = props => <Cta {...props} type="tertiary" />;

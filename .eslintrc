@@ -5,6 +5,7 @@
     "react/jsx-closing-tag-location": "off",
     "react/jsx-wrap-multiplines": "off",
     "react/prop-types": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }
