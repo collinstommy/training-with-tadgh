@@ -5,11 +5,17 @@ import i18n from '../config/i18n';
 import SectionHeader from './SectionHeader';
 import Section from '../shared/Section';
 import Icon from './Icon';
+import { breakpoint } from '../lib/functions';
 
 const { header, image, list } = i18n.programs;
 
 const Text = styled.div`
   width: 60%;
+
+  ${breakpoint.tabletPortrait`
+    width: 100%;
+    margin: 2rem;
+  `};
 
   i.fas {
     font-size: 3rem;
@@ -21,6 +27,10 @@ const ImageWrapper = styled.div`
   width: 40%;
   margin-left: 2rem;
   ${props => props.theme.flexCenter};
+
+  ${breakpoint.tabletPortrait`
+    display: none;
+  `};
 `;
 
 const Image = styled.img`
@@ -33,6 +43,12 @@ const Items = styled.div`
   grid-template-columns: auto auto;
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
+
+  ${breakpoint.tabletPortrait`
+    grid-template-columns: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 2rem;
+  `};
 `;
 
 const Programs = () => (

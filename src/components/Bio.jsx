@@ -2,10 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../shared/Section';
 import i18n from '../config/i18n';
+import { breakpoint } from '../lib/functions';
 
 const { image } = i18n.bio;
 const Row = styled.div`
   width: 60%;
+
+  ${breakpoint.tabletPortrait`
+    width: 100%;
+    margin: 3rem;
+  `};
 `;
 
 const Container = styled(Section)`
@@ -21,6 +27,10 @@ const ImageContainer = styled.div`
   width: 40%;
   display: flex;
   justify-content: center;
+
+  ${breakpoint.tabletPortrait`
+    display: none;
+  `};
 `;
 
 const Bio = () => {

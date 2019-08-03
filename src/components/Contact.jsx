@@ -3,11 +3,11 @@
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Section from '../shared/Section';
 import { PrimaryCta } from './Cta';
+import { breakpoint, getWidth } from '../lib/functions';
 
 const Container = styled(Section)`
   display: grid;
@@ -15,20 +15,22 @@ const Container = styled(Section)`
   grid-row-gap: 4rem;
   width: 100%;
 
-  .mapouter {
-    height: 500px;
-    width: 502px;
-  }
+  ${breakpoint.tabletPortrait`
+    grid-template-columns: auto;
+    grid-row-gap: 0;
+  `};
 
   .gmap_canvas {
     overflow: hidden;
-    height: 500px;
-    width: 502px;
   }
 
   input, select, textarea {
     width: 70%;
     margin-bottom: 1.25rem;
+
+    ${breakpoint.tabletPortrait`
+      width: 100%;
+    `};
   }
 
   label {
@@ -41,9 +43,47 @@ const SendCta = styled(PrimaryCta)`
   border-radius: 0;
 `;
 
+const FormWrapper = styled.div`
+  ${breakpoint.tabletPortrait`
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `};
+`;
+const Form = styled.form`
+  ${breakpoint.tabletPortrait`
+    width: 100%
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `};
+
+  label {
+    align-self: flex-start;
+  }
+`;
+
+
+const MapWrapper = styled.div`
+  ${breakpoint.tabletPortrait`
+    margin: 2rem;
+  `};
+`;
+
+
 const Contact = () => {
   const [fields, setFields] = useState({
     reason: 'info',
+  });
+
+  const map = useRef(null);
+
+  useEffect(() => {
+    const width = getWidth();
+    if (width < 700) {
+      map.current.width = width - 40;
+    }
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -86,7 +126,6 @@ const Contact = () => {
         }
       })
       .catch(error => showError(error));
-
   };
 
   const handleTextChanged = ({ target }) => {
@@ -99,9 +138,9 @@ const Contact = () => {
   };
 
   const renderForm = () => (
-    <div>
+    <FormWrapper>
       <h2>Contact US</h2>
-      <form name="contact" method="POST" data-netlify="true">
+      <Form name="contact" method="POST" data-netlify="true">
         <label htmlFor="firstname">First Name</label>
         <input type="text" placeholder="" name="firstname" id="firstname" onChange={handleTextChanged} />
         <label htmlFor="lastName">Last Name</label>
@@ -117,8 +156,8 @@ const Contact = () => {
           <option value="other">Other</option>
         </select>
         <SendCta type="button" onClick={handleSubmitForm}>Send Message</SendCta>
-      </form>
-    </div>
+      </Form>
+    </FormWrapper>
   );
 
   return (
@@ -127,9 +166,10 @@ const Contact = () => {
         ? 'Thanks for contacting us. We will be in touch shortly'
         : renderForm()
       }
-      <div className="mapouter">
+      <MapWrapper>
         <div className="gmap_canvas">
           <iframe
+            ref={map}
             height="500"
             width="502"
             title="map"
@@ -139,7 +179,7 @@ const Contact = () => {
             scrolling="no"
           />
         </div>
-      </div>
+      </MapWrapper>
     </Container>
   );
 };

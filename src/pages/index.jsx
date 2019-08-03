@@ -29,6 +29,8 @@ export default () => (
       <Pricing />
       <Team />
       <Contact />
+      {/*
+      */}
     </Wrapper>
   </Layout>
 );

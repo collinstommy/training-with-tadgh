@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from './Section';
 import { PrimaryCta } from '../components/Cta';
+import { breakpoint } from '../lib/functions';
 
 const Container = styled(Section)`
   ${props => props.theme.flexColumn};
@@ -16,6 +17,10 @@ const Container = styled(Section)`
     url(${props => props.backgroundImage});
   background-size: cover;
   color: ${props => props.theme.lightest};
+
+  ${breakpoint.tabletPortrait`
+    text-align: center;
+  `};
 `;
 
 const Title = styled.h2`
@@ -35,19 +40,23 @@ const Text = styled.div`
   ${props => props.theme.flexColumn};
   ${props => props.theme.flexCenter};
   margin-bottom: 4rem;
+
+  ${breakpoint.tabletPortrait`
+    margin: 2rem;
+  `};
 `;
 
-const FullWidthCta = ({ title, subtitle, ctaText, backgroundImage }) => {
-  return (
-    <Container backgroundImage={backgroundImage} fullWidth>
-      <Text>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-      </Text>
-      <PrimaryCta>{ctaText}</PrimaryCta>
-    </Container>
-  );
-};
+const FullWidthCta = ({
+  title, subtitle, ctaText, backgroundImage
+}) => (
+  <Container backgroundImage={backgroundImage} fullWidth>
+    <Text>
+      <Title>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
+    </Text>
+    <PrimaryCta>{ctaText}</PrimaryCta>
+  </Container>
+);
 
 FullWidthCta.propTypes = {};
 

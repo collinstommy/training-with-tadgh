@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Section from '../shared/Section';
 import i18n from '../config/i18n';
 import { PrimaryCta } from './Cta';
+import { breakpoint } from '../lib/functions';
 
 const Container = styled(Section)`
   display: grid;
@@ -10,7 +11,18 @@ const Container = styled(Section)`
 
   p {
     width: 70%;
+
+    ${breakpoint.tabletPortrait`
+     width: 100%;
+    `};
   }
+
+  ${breakpoint.tabletPortrait`
+    grid-row-gap: 2rem;
+    grid-template-columns: auto;
+    text-align: center;
+    padding: 5rem 0;
+  `};
 `;
 
 const Wrapper = styled.div`
