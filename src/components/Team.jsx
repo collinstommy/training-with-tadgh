@@ -13,7 +13,7 @@ const Container = styled(Section)`
     width: 70%;
 
     ${breakpoint.tabletPortrait`
-     width: 100%;
+      width: 100%;
     `};
   }
 
@@ -21,7 +21,7 @@ const Container = styled(Section)`
     grid-row-gap: 2rem;
     grid-template-columns: auto;
     text-align: center;
-    padding: 5rem 0;
+    padding: 5rem 2rem;
   `};
 `;
 

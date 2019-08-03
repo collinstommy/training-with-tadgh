@@ -1,17 +1,23 @@
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html {...props.htmlAttributes} lang="en">
       <head>
+        <title>TC Fitness - Mallow</title>
+        <meta name="description" content="TC Fitness specialises in Personal training, nutrition plans, team fitness and online programming. We are based in Mallow, Co. Cork." />
+
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="https://kit.fontawesome.com/ad8f962fea.js"></script>
+        <script src="https://kit.fontawesome.com/ad8f962fea.js" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -20,7 +26,7 @@ export default function HTML(props) {
           This app works best with JavaScript enabled.
         </noscript>
         <div
-          key={`body`}
+          key="body"
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />

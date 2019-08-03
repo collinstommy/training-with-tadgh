@@ -6,16 +6,20 @@ import { breakpoint } from '../lib/functions';
 
 const { image } = i18n.bio;
 const Row = styled.div`
-  width: 60%;
 
   ${breakpoint.tabletPortrait`
     width: 100%;
-    margin: 3rem;
   `};
 `;
 
 const Container = styled(Section)`
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-column-gap: 4rem;
 
+  ${breakpoint.tabletPortrait`
+    grid-template-columns: 70%;
+  `};
 `;
 
 const List = styled.ul`
@@ -24,7 +28,6 @@ const List = styled.ul`
 `;
 
 const ImageContainer = styled.div`
-  width: 40%;
   display: flex;
   justify-content: center;
 

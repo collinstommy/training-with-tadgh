@@ -10,22 +10,12 @@ import { PrimaryCta } from './Cta';
 import { breakpoint, getWidth } from '../lib/functions';
 
 const Container = styled(Section)`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-row-gap: 4rem;
   width: 100%;
+  color: ${props => props.theme.flexColumn};
 
-  ${breakpoint.tabletPortrait`
-    grid-template-columns: auto;
-    grid-row-gap: 0;
-  `};
-
-  .gmap_canvas {
-    overflow: hidden;
-  }
 
   input, select, textarea {
-    width: 70%;
+    width: 90%;
     margin-bottom: 1.25rem;
 
     ${breakpoint.tabletPortrait`
@@ -36,6 +26,19 @@ const Container = styled(Section)`
   label {
     color: ${props => props.theme.secondary};
   }
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-row-gap: 4rem;
+  grid-column-gap: 3rem;
+  width: 100%;
+
+  ${breakpoint.tabletPortrait`
+    grid-template-columns: auto;
+    grid-row-gap: 0;
+  `};
 `;
 
 const SendCta = styled(PrimaryCta)`
@@ -71,6 +74,11 @@ const MapWrapper = styled.div`
   `};
 `;
 
+const Heading = styled.h2`
+  ${breakpoint.tabletPortrait`
+    text-align: center;
+  `};
+`;
 
 const Contact = () => {
   const [fields, setFields] = useState({
@@ -139,7 +147,6 @@ const Contact = () => {
 
   const renderForm = () => (
     <FormWrapper>
-      <h2>Contact US</h2>
       <Form name="contact" method="POST" data-netlify="true">
         <label htmlFor="firstname">First Name</label>
         <input type="text" placeholder="" name="firstname" id="firstname" onChange={handleTextChanged} />
@@ -162,12 +169,13 @@ const Contact = () => {
 
   return (
     <Container id="contact">
-      {submitted
-        ? 'Thanks for contacting us. We will be in touch shortly'
-        : renderForm()
-      }
-      <MapWrapper>
-        <div className="gmap_canvas">
+      <Heading>Contact US</Heading>
+      <Grid>
+        {submitted
+          ? 'Thanks for contacting us. We will be in touch shortly'
+          : renderForm()
+        }
+        <MapWrapper>
           <iframe
             ref={map}
             height="500"
@@ -178,8 +186,8 @@ const Contact = () => {
             frameBorder="0"
             scrolling="no"
           />
-        </div>
-      </MapWrapper>
+        </MapWrapper>
+      </Grid>
     </Container>
   );
 };

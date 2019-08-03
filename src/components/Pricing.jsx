@@ -38,7 +38,10 @@ const Title = styled.div`
 
 const Container = styled(Section)`
   padding: 2rem 8rem 8rem;
-  flex-wrap: wrap;
+
+  ${breakpoint.tabletPortrait`
+    flex-wrap: wrap;
+  `};
 `;
 
 const Price = styled.span`

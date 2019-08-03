@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import i18n from '../config/i18n';
 import SectionHeader from './SectionHeader';
@@ -14,7 +13,7 @@ const Text = styled.div`
 
   ${breakpoint.tabletPortrait`
     width: 100%;
-    margin: 2rem;
+    margin: 3rem;
   `};
 
   i.fas {

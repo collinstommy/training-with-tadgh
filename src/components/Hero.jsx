@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import i18n from '../config/i18n';
 import Header from './Navigation';
 import { SecondaryCta } from './Cta';
+import { breakpoint } from '../lib/functions';
 
 const { subtitle, backgroundImage, ctaText } = i18n.hero;
 
@@ -51,6 +52,10 @@ const Highlight = styled.span`
 
 const Text = styled.div`
   margin: 200px 0;
+
+  ${breakpoint.tabletPortrait`
+     margin: 4rem 0;
+  `};
 `;
 
 export default () => (

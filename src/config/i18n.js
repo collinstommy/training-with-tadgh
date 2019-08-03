@@ -2,11 +2,11 @@ export default {
   hero: {
     title: '',
     subtitle: 'Work with me to achieve your fitness and nutrition goals',
-    backgroundImage: `https://res.cloudinary.com/dmfebxjzk/image/upload/v1562185940/tadgh%20website/box-jump.jpg`,
+    backgroundImage: 'https://res.cloudinary.com/dmfebxjzk/image/upload/v1562185940/tadgh%20website/box-jump.jpg',
     ctaText: 'JOIN ME'
   },
   programs: {
-    image: `https://res.cloudinary.com/dmfebxjzk/image/upload/v1564089259/tadgh%20website/dumbbells.png`,
+    image: 'https://res.cloudinary.com/dmfebxjzk/image/upload/v1564089259/tadgh%20website/dumbbells.png',
     header: 'Our Programs',
     list: [
       {
