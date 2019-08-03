@@ -10,8 +10,8 @@ const Container = styled.section`
   width: 100%;
 `;
 
-const Section = ({ children, className, fullWidth }) => {
-  return <Container fullWidth={fullWidth} className={className}>{children}</Container>;
-};
+const Section = ({
+  children, className, fullWidth, ...props
+}) => <Container {...props} fullWidth={fullWidth} className={className}>{children}</Container>;
 
 export default Section;

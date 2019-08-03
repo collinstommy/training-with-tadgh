@@ -28,6 +28,7 @@ const Title = styled.div`
 `;
 
 const Container = styled(Section)`
+  padding: 2rem 8rem 8rem;
 `;
 
 const Price = styled.span`
@@ -54,30 +55,48 @@ const Wrapper = styled.div`
   background-color: ${props => props.theme.darkest};
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const { packages } = i18n.pricing;
 
-const Pricing = () => {
-  return (
-    <Wrapper>
-      <Container>
-        {packages.map(({ title, price, details }) => (
-          <Package>
-            <Title>{title}</Title>
-            <div>
-              <Price>€{price}</Price><Time>/month</Time>
-            </div>
-            <List>{details.map(item => <Detail>{item}</Detail>)}
-            </List>
-            <TertiaryCta>Book</TertiaryCta>
-          </Package>
-        ))}
-      </Container>
-    </Wrapper>
-  );
-};
+const Heading = styled.h2`
+  color: ${props => props.theme.lightest};
+  position: relative;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+
+  &:after {
+    content: '';
+    background-color: ${props => props.theme.primary};
+    transform: translateX(-50%);  
+    position: absolute;
+    width: 50%;
+    bottom: -2rem;
+    left: 50%;
+    height: 4px;
+  }
+`;
+
+const Pricing = () => (
+  <Wrapper id="pricing">
+    <Heading>Pricing</Heading>
+    <Container>
+      {packages.map(({ title, price, details, time }) => (
+        <Package>
+          <Title>{title}</Title>
+          <div>
+            <Price>€{price}</Price><Time>/{time}</Time>
+          </div>
+          <List>{details.map(item => <Detail>{item}</Detail>)}
+          </List>
+          <TertiaryCta>Book</TertiaryCta>
+        </Package>
+      ))}
+    </Container>
+  </Wrapper>
+);
 
 
 export default Pricing;

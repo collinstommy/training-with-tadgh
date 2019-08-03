@@ -25,7 +25,7 @@ const ImageContainer = styled.div`
 
 const Bio = () => {
   return (
-    <Container>
+    <Container id="about">
       <ImageContainer>
         <img src={image} alt="Tadgh Carroll" />
       </ImageContainer>

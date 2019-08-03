@@ -8,6 +8,7 @@ import i18n from '../config/i18n';
 import Bio from '../components/Bio';
 import Pricing from '../components/Pricing';
 import Team from '../components/Team';
+import Contact from '../components/Contact';
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ export default () => (
       <Bio />
       <Pricing />
       <Team />
+      <Contact />
     </Wrapper>
   </Layout>
 );

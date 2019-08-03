@@ -35,28 +35,24 @@ const Items = styled.div`
   grid-row-gap: 4rem;
 `;
 
-const Programs = () => {
-  return (
-    <Section>
-      <Text>
-        <SectionHeader>{header}</SectionHeader>
-        <Items>
-          {list.map(item => {
-            return (
-              <div>
-                <Icon name={item.icon} />
-                <h3>{item.title}</h3>
-                <p>{item.details}</p>
-              </div>
-            );
-          })}
-        </Items>
-      </Text>
-      <ImageWrapper>
-        <Image src={image} alt="dumbbells" />
-      </ImageWrapper>
-    </Section>
-  );
-};
+const Programs = () => (
+  <Section id="programs">
+    <Text>
+      <SectionHeader>{header}</SectionHeader>
+      <Items>
+        {list.map(item => (
+          <div>
+            <Icon name={item.icon} />
+            <h3>{item.title}</h3>
+            <p>{item.details}</p>
+          </div>
+        ))}
+      </Items>
+    </Text>
+    <ImageWrapper>
+      <Image src={image} alt="dumbbells" />
+    </ImageWrapper>
+  </Section>
+);
 
 export default Programs;

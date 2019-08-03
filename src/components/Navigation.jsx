@@ -19,19 +19,20 @@ const NavItem = styled.li`
 
 const NavLink = styled.a`
   cursor: pointer;
+  text-decoration: none;
   
   &:hover {
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.lightest};
   }
 `;
 
 const Header = () => (
   <Nav>
     <Items>
-      <NavItem><NavLink>Programs</NavLink></NavItem>
-      <NavItem><NavLink>About</NavLink></NavItem>
-      <NavItem><NavLink>Pricing</NavLink></NavItem>
-      <NavItem><NavLink>Contact</NavLink></NavItem>
+      <NavItem><NavLink href="#programs">Programs</NavLink></NavItem>
+      <NavItem><NavLink href="#about">About</NavLink></NavItem>
+      <NavItem><NavLink href="#pricing">Pricing</NavLink></NavItem>
+      <NavItem><NavLink href="#contact">Contact</NavLink></NavItem>
     </Items>
   </Nav>
 );

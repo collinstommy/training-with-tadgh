@@ -26,15 +26,15 @@ const Content = styled.button`
   text-transform: uppercase;
   font-weight: 600;
 
-  ${props => props.type === 'secondary' && secondaryStyles};
-  ${props => props.type === 'primary' && primaryStyles};
-  ${props => props.type === 'tertiary' && tertiaryStyles};
+  ${props => props.ctaType === 'secondary' && secondaryStyles};
+  ${props => props.ctaType === 'primary' && primaryStyles};
+  ${props => props.ctaType === 'tertiary' && tertiaryStyles};
 `;
 
 const Cta = ({ text, children, ...props }) => (
   <Content {...props}>{children}</Content>
 );
 
-export const PrimaryCta = props => <Cta {...props} type="primary" />;
-export const SecondaryCta = props => <Cta {...props} type="secondary" />;
-export const TertiaryCta = props => <Cta {...props} type="tertiary" />;
+export const PrimaryCta = props => <Cta {...props} ctaType="primary" />;
+export const SecondaryCta = props => <Cta {...props} ctaType="secondary" />;
+export const TertiaryCta = props => <Cta {...props} ctaType="tertiary" />;

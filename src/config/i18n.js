@@ -48,6 +48,7 @@ export default {
   pricing: {
     packages: [{
       title: 'Bronze',
+      time: '6 weeks',
       price: 240,
       details: [
         '1 Sessions per week',
@@ -56,6 +57,7 @@ export default {
       ]
     }, {
       title: 'Silver',
+      time: '6 weeks',
       price: 410,
       details: [
         '2 Sessions per week',
@@ -64,11 +66,22 @@ export default {
       ]
     }, {
       title: 'Gold',
+      time: '6 weeks',
       price: 540,
       details: [
         '3 Sessions per week',
         'Nutrition Program',
         'App Access'
+      ]
+    },
+    {
+      title: 'Online',
+      price: 100,
+      time: 'month',
+      details: [
+        'New program each week',
+        'Feedback through video & app',
+        'Nutrition Program'
       ]
     }
     ]
