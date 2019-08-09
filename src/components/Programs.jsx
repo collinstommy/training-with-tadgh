@@ -10,6 +10,8 @@ const { header, image, list } = i18n.programs;
 
 const Text = styled.div`
   width: 60%;
+  margin: 3rem;
+
 
   ${breakpoint.tabletPortrait`
     width: 100%;
@@ -25,6 +27,8 @@ const Text = styled.div`
 const ImageWrapper = styled.div`
   width: 40%;
   margin-left: 2rem;
+  margin: 3rem;
+
   ${props => props.theme.flexCenter};
 
   ${breakpoint.tabletPortrait`

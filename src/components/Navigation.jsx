@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import React from 'react';
 import { breakpoint } from '../lib/functions';
 
@@ -24,7 +25,7 @@ const NavItem = styled.li`
   margin: 1.5rem;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(props => <Link {...props} />)`
   cursor: pointer;
   text-decoration: none;
   color: ${props => props.theme.lightest};
@@ -34,17 +35,17 @@ const NavLink = styled.a`
   }
 
   &:visited {
-    color: ${props => props.theme.lightest};
+    color: ${props => props.theme.primary};
   }
 `;
 
-const Header = () => (
-  <Nav>
+const Header = ({ className }) => (
+  <Nav className={className}>
     <Items>
-      <NavItem><NavLink href="#programs">Programs</NavLink></NavItem>
-      <NavItem><NavLink href="#about">About</NavLink></NavItem>
-      <NavItem><NavLink href="#pricing">Pricing</NavLink></NavItem>
-      <NavItem><NavLink href="#contact">Contact</NavLink></NavItem>
+      <NavItem><NavLink to="/#program">Programs</NavLink></NavItem>
+      <NavItem><NavLink to="/#about">About</NavLink></NavItem>
+      <NavItem><NavLink to="/#pricing">Pricing</NavLink></NavItem>
+      <NavItem><NavLink to="/#contact">Contact</NavLink></NavItem>
     </Items>
   </Nav>
 );

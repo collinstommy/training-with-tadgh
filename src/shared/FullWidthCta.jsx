@@ -47,14 +47,18 @@ const Text = styled.div`
 `;
 
 const FullWidthCta = ({
-  title, subtitle, ctaText, backgroundImage
+  title, subtitle, ctaText, backgroundImage, className,
 }) => (
-  <Container backgroundImage={backgroundImage} fullWidth>
+  <Container
+    className={className}
+    backgroundImage={backgroundImage}
+    fullWidth
+  >
     <Text>
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
     </Text>
-    <PrimaryCta>{ctaText}</PrimaryCta>
+    {ctaText && <PrimaryCta to="/contact">{ctaText}</PrimaryCta>}
   </Container>
 );
 

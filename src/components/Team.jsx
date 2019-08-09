@@ -46,7 +46,7 @@ const Team = () => (
         <p>{body}</p>
       </div>
       <Col>
-        <PrimaryCta>
+        <PrimaryCta to="/contact">
           {ctaText}
         </PrimaryCta>
       </Col>

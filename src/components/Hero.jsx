@@ -67,7 +67,7 @@ export default () => (
         <Highlight>Fitness </Highlight>
       </Title>
       <Subtitle>{subtitle}</Subtitle>
-      <StyledCta type="secondary">{ctaText}</StyledCta>
+      <StyledCta type="secondary" to="/contact">{ctaText}</StyledCta>
     </Text>
   </Container>
 );

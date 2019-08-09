@@ -6,7 +6,6 @@ import { breakpoint } from '../lib/functions';
 
 const { image } = i18n.bio;
 const Row = styled.div`
-
   ${breakpoint.tabletPortrait`
     width: 100%;
   `};
@@ -43,7 +42,7 @@ const Bio = () => {
         <img src={image} alt="Tadgh Carroll" />
       </ImageContainer>
       <Row>
-        <h2>Tadhg Carroll</h2>
+        <h2>Tadgh Carroll</h2>
         <p>
           A sports fanatic, born and bred in Mallow, Co. Cork. I'm passionate about sport, fitness, and nutrition. Above all else, I'm passionate about empowering others to improve. I believe that a coach should always be improving themselves. I read, study and develop new techniques to help those whom I coach. It is this dedication that has allowed me to provide positive outcomes again and again for my clients.
         </p>
@@ -52,7 +51,8 @@ const Bio = () => {
         </p>
         <h3>Qualifications</h3>
         <List>
-          <li>Level one CrossFit coach.</li>
+          <li>Level 2 CrossFit coach</li>
+          <li>Sport and Exercise Nutrition BSc (Hons)</li>
           <li>Joel Jameson-HRV training course</li>
           <li>Think Tank Fitness courses</li>
           <li>Year 1 Physical Therapy</li>

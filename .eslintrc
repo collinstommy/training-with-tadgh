@@ -6,6 +6,7 @@
     "react/jsx-wrap-multiplines": "off",
     "react/prop-types": "off",
     "react/require-default-props": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off"
   }
 }

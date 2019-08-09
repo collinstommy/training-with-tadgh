@@ -90,5 +90,8 @@ export default {
     heading: 'Team Training Available',
     body: 'I work with teams including Mallow Footballers to build strength and conditioning. Contact me directly for quotes and a free consultation.',
     ctaText: 'Find out more'
+  },
+  contact: {
+    imageUrl: 'https://res.cloudinary.com/dmfebxjzk/image/upload/v1564916192/tadgh%20website/gym.jpg'
   }
 };

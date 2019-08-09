@@ -1,30 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Section from '../shared/Section';
 import i18n from '../config/i18n';
 import { TertiaryCta } from './Cta';
 import { breakpoint } from '../lib/functions';
 
+const Container = styled(Section)`
+  padding: 2rem 8rem 8rem;
+  margin: 2rem;
+  width: 95%;
+
+  display: grid;
+  grid-template-columns: 25fr 25fr 25fr 25fr;
+  grid-column-gap: 1rem;
+
+  ${breakpoint.tabletPortrait`
+    flex-wrap: wrap;
+    grid-template-columns: 50fr 50fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    
+  `};
+
+  ${breakpoint.phone`
+    flex-wrap: wrap;
+    grid-template-columns: 100fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    width: 100%;
+    margin: 3rem;
+    padding: 0;
+  `};
+`;
+
 const Package = styled.div`
-  width: 30%;
   ${props => props.theme.flexColumn};
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.lightest};
   padding: 6rem 0;
 
-
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
-
   ${breakpoint.tabletPortrait`
-    width: 100%;
-    margin: 2rem;
     padding: 2rem 0;
     text-align: center;
-
+    margin: 2rem;
   `};
 `;
 
@@ -34,14 +53,6 @@ const Title = styled.div`
   letter-spacing: 4px;
   font-weight: 600;
   font-size: 1.8rem;
-`;
-
-const Container = styled(Section)`
-  padding: 2rem 8rem 8rem;
-
-  ${breakpoint.tabletPortrait`
-    flex-wrap: wrap;
-  `};
 `;
 
 const Price = styled.span`
@@ -113,7 +124,7 @@ const Pricing = () => (
           </div>
           <List>{details.map(item => <Detail>{item}</Detail>)}
           </List>
-          <TertiaryCta>Book</TertiaryCta>
+          <TertiaryCta to="/contact">Book</TertiaryCta>
         </Package>
       ))}
     </Container>
