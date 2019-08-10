@@ -8,6 +8,9 @@
 module.exports = {
   plugins: [
     {
+      resolve: 'gatsby-plugin-styled-components',
+    },
+    {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
         fonts: [
