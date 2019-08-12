@@ -43,7 +43,7 @@ const Package = styled.div`
   ${breakpoint.tabletPortrait`
     padding: 2rem 0;
     text-align: center;
-    margin: 2rem;
+    margin: 2rem 3rem;
   `};
 `;
 
