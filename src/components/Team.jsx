@@ -21,7 +21,7 @@ const Container = styled(Section)`
     grid-row-gap: 2rem;
     grid-template-columns: auto;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 5rem 3rem;
   `};
 `;
 

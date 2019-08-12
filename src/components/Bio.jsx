@@ -15,31 +15,34 @@ const Container = styled(Section)`
   display: grid;
   grid-template-columns: 40% auto;
   grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+  padding: 10rem;
 
   ${breakpoint.tabletPortrait`
-    grid-template-columns: 70%;
+    grid-template-columns: 80%;
   `};
 `;
 
 const List = styled.ul`
   list-style: square;
   color: ${props => props.theme.secondary};
+  margin-left: 2rem;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
+`;
 
-  ${breakpoint.tabletPortrait`
-    display: none;
-  `};
+const Image = styled.img`
+  width: 100%;
 `;
 
 const Bio = () => {
   return (
     <Container id="about">
       <ImageContainer>
-        <img src={image} alt="Tadgh Carroll" />
+        <Image src={image} alt="Tadgh Carroll" />
       </ImageContainer>
       <Row>
         <h2>Tadgh Carroll</h2>
