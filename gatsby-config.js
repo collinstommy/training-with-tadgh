@@ -15,7 +15,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Roboto',
+            family: 'Lexend Exa',
             variants: [
               '400',
               '400i',
@@ -25,6 +25,16 @@ module.exports = {
           },
           {
             family: 'Open Sans',
+          },
+          {
+            family: 'Montserrat',
+            variants: [
+              '400',
+              '400i',
+              '600',
+              '700',
+              '700i'
+            ],
           },
         ]
       }

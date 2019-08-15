@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../shared/Section';
 import i18n from '../config/i18n';
-import { TertiaryCta } from './Cta';
+import { TertiaryCta, PrimaryCta } from './Cta';
 import { breakpoint } from '../lib/functions';
 
 const Container = styled(Section)`
@@ -124,7 +124,7 @@ const Pricing = () => (
           </div>
           <List>{details.map(item => <Detail>{item}</Detail>)}
           </List>
-          <TertiaryCta to="/contact">Book</TertiaryCta>
+          <PrimaryCta to="/contact">Book</PrimaryCta>
         </Package>
       ))}
     </Container>

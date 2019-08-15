@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import i18n from '../config/i18n';
-import Header from './Navigation';
-import { SecondaryCta } from './Cta';
+import Navigation from './Navigation';
+import { SecondaryCta, PrimaryCta } from './Cta';
 import { breakpoint } from '../lib/functions';
 
 const { subtitle, backgroundImage, ctaText } = i18n.hero;
@@ -13,7 +13,6 @@ const Container = styled.header`
   align-items: center;
   flex-direction: column;
   text-align: center;
-  font-family: Open Sans;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.7),
@@ -32,18 +31,20 @@ const Title = styled.h1`
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
-  margin: 30px;
+  margin: 15px;
 `;
 
 const Subtitle = styled.h2`
   font-size: 2rem;
   line-height: 2.2rem;
   margin: 15px;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: Montserrat;
+  text-transform: lowercase;
 `;
 
-const StyledCta = styled(SecondaryCta)`
-  margin: 2rem;
+const StyledCta = styled(PrimaryCta)`
+  margin: 3.5rem;
 `;
 
 const Highlight = styled.span`
@@ -60,7 +61,7 @@ const Text = styled.div`
 
 export default () => (
   <Container>
-    <Header />
+    <Navigation />
     <Text>
       <Title>
         <span>TC </span>

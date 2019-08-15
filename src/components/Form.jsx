@@ -10,7 +10,6 @@ import { breakpoint } from '../lib/functions';
 
 const SendCta = styled(PrimaryCta)`
   display: inline-block;
-  border-radius: 0;
   margin-top: 2rem;
   align-self: flex-start;
 `;

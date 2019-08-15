@@ -4,15 +4,21 @@ import React from 'react';
 import { breakpoint } from '../lib/functions';
 
 const Nav = styled.nav`
-  margin-top: 1rem;
-  ${props => props.theme.container};
+  letter-spacing: 2px;
+  display: flex;
+  width: calc(100% - 8rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
 `;
 
 const Items = styled.ol`
-  display: flex;
   font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: Montserrat;
+  margin: 0;
 
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -22,7 +28,13 @@ const Items = styled.ol`
 `;
 
 const NavItem = styled.li`
-  margin: 1.5rem;
+  margin: 0 1rem;
+`;
+
+const Logo = styled.span`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-right: 2rem;
 `;
 
 const NavLink = styled(props => <Link {...props} />)`
@@ -35,14 +47,17 @@ const NavLink = styled(props => <Link {...props} />)`
   }
 
   &:visited {
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.lightest};
   }
 `;
 
 const Header = ({ className }) => (
   <Nav className={className}>
+    <Logo>
+      <NavLink to="/">TC Fitness</NavLink>
+    </Logo>
     <Items>
-      <NavItem><NavLink to="/#program">Programs</NavLink></NavItem>
+      <NavItem><NavLink to="/#programs">Programs</NavLink></NavItem>
       <NavItem><NavLink to="/#about">About</NavLink></NavItem>
       <NavItem><NavLink to="/#pricing">Pricing</NavLink></NavItem>
       <NavItem><NavLink to="/#contact">Contact</NavLink></NavItem>

@@ -38,7 +38,7 @@ export default createGlobalStyle`
   }
 
   body, p {
-    font-family: Roboto, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.5rem;
     line-height: 2.6rem
   }
@@ -49,6 +49,7 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h5, h5 {
     text-transform: uppercase;
+    font-family: Lexend Exa, sans-serif;
   }
 
   h1 {
