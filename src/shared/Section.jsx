@@ -11,7 +11,7 @@ const Container = styled.section`
   width: 100%;
   
   ${breakpoint.tabletPortrait`
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   `};
 `;
 

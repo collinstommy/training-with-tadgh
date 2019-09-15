@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import i18n from '../config/i18n';
 import Navigation from './Navigation';
-import { SecondaryCta, PrimaryCta } from './Cta';
+import { PrimaryCta } from './Cta';
 import { breakpoint } from '../lib/functions';
 
 const { subtitle, backgroundImage, ctaText } = i18n.hero;
@@ -32,6 +32,10 @@ const Title = styled.h1`
   text-transform: uppercase;
   line-height: 1;
   margin: 15px;
+
+  ${breakpoint.tabletPortrait`
+    font-size: 3rem;
+  `};
 `;
 
 const Subtitle = styled.h2`
@@ -41,6 +45,10 @@ const Subtitle = styled.h2`
   font-weight: 400;
   font-family: Montserrat;
   text-transform: lowercase;
+
+  ${breakpoint.tabletPortrait`
+    font-size: 1.7rem;
+  `};
 `;
 
 const StyledCta = styled(PrimaryCta)`

@@ -21,6 +21,9 @@ const Container = styled(Section)`
   ${breakpoint.tabletPortrait`
     text-align: center;
   `};
+  ${breakpoint.phone`
+    padding: 6rem 0;
+  `};
 `;
 
 const Title = styled.h2`
@@ -28,12 +31,20 @@ const Title = styled.h2`
   font-weight: 600;
   line-height: 1.2;
   margin: 0rem;
+
+  ${breakpoint.phone`
+    font-size: 2rem;
+  `};
 `;
 
 const Subtitle = styled.p`
   color: ${props => props.theme.lightest};
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.2;
+
+  ${breakpoint.phone`
+    font-size: 1.5rem;
+  `};
 `;
 
 const Text = styled.div`

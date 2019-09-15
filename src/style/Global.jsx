@@ -20,6 +20,7 @@ export default createGlobalStyle`
   }
   body {
     line-height: 1;
+    overflow-x: hidden;
   }
   ol, ul {
     list-style: none;

@@ -21,6 +21,9 @@ const Container = styled(Section)`
   ${breakpoint.tabletPortrait`
     grid-template-columns: 80%;
   `};
+   ${breakpoint.phone`
+    padding: 7rem 0;
+  `};
 `;
 
 const List = styled.ul`

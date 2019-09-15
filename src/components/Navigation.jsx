@@ -35,6 +35,10 @@ const Logo = styled.span`
   font-size: 2.5rem;
   font-weight: 700;
   margin-right: 2rem;
+
+  ${breakpoint.phone`
+    display: none;
+  `};
 `;
 
 const NavLink = styled(props => <Link {...props} />)`

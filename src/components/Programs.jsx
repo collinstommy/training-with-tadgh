@@ -12,7 +12,6 @@ const Text = styled.div`
   width: 60%;
   margin: 3rem;
 
-
   ${breakpoint.tabletPortrait`
     width: 100%;
     margin: 3rem;
