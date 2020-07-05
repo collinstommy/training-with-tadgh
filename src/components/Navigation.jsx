@@ -58,7 +58,7 @@ const NavLink = styled(props => <Link {...props} />)`
 const Header = ({ className }) => (
   <Nav className={className}>
     <Logo>
-      <NavLink to="/">TC Fitness</NavLink>
+      <NavLink to="/">TC Program</NavLink>
     </Logo>
     <Items>
       <NavItem><NavLink to="/#programs">Programs</NavLink></NavItem>

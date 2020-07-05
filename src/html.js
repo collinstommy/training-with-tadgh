@@ -8,8 +8,8 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes} lang="en">
       <head>
-        <title>TC Fitness - Mallow</title>
-        <meta name="description" content="TC Fitness specialises in Personal training, nutrition plans, team fitness and online programming. We are based in Mallow, Co. Cork." />
+        <title>TC Program - Mallow</title>
+        <meta name="description" content="TC Program specialises in Personal training, nutrition plans, team fitness and online programming. We are based in Mallow, Co. Cork." />
 
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

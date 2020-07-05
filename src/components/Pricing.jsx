@@ -11,12 +11,12 @@ const Container = styled(Section)`
   width: 95%;
 
   display: grid;
-  grid-template-columns: 25fr 25fr 25fr 25fr;
-  grid-column-gap: 1rem;
+  grid-template-columns: 25fr 25fr;
+  grid-column-gap: 5rem;
 
   ${breakpoint.tabletPortrait`
     flex-wrap: wrap;
-    grid-template-columns: 50fr 50fr;
+    grid-template-columns: 100fr;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     

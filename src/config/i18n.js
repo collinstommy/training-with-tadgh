@@ -46,44 +46,29 @@ export default {
     image: 'https://res.cloudinary.com/dmfebxjzk/image/upload/v1565595510/tadgh%20website/tadgh2.jpg',
   },
   pricing: {
-    packages: [{
-      title: 'Bronze',
-      time: '6 weeks',
-      price: 240,
-      details: [
-        '1 Sessions per week',
-        'Nutrition Program',
-        'App Access'
-      ]
-    }, {
-      title: 'Silver',
-      time: '6 weeks',
-      price: 410,
-      details: [
-        '2 Sessions per week',
-        'Nutrition Program',
-        'App Access'
-      ]
-    }, {
-      title: 'Gold',
-      time: '6 weeks',
-      price: 540,
-      details: [
-        '3 Sessions per week',
-        'Nutrition Program',
-        'App Access'
-      ]
-    },
-    {
-      title: 'Online',
-      price: 100,
-      time: 'month',
-      details: [
-        'New program each week',
-        'Feedback through video & app',
-        'Nutrition Program'
-      ]
-    }
+    packages: [
+      {
+        title: 'Full Time Online',
+        price: 100,
+        time: 'month',
+        details: [
+          '6 days of programming a week',
+          'Feedback through online platform',
+          'Nutritional Advice',
+          'Free 5k running plan'
+        ]
+      },
+      {
+        title: 'Full Time Online',
+        price: 50,
+        time: 'month',
+        details: [
+          '3 days of programming a week',
+          'Feedback through online platform',
+          'Nutritional Advice',
+          'Free 5k running plan'
+        ]
+      }
     ]
   },
   team: {
