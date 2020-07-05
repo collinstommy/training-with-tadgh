@@ -6,10 +6,10 @@ import Section from '../shared/Section';
 import Icon from './Icon';
 import { breakpoint } from '../lib/functions';
 
-const { header, image, list } = i18n.programs;
+const { header, list } = i18n.programs;
 
 const Text = styled.div`
-  width: 60%;
+  width: 100%;
   margin: 3rem;
 
   ${breakpoint.tabletPortrait`
@@ -23,28 +23,12 @@ const Text = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
-  width: 40%;
-  margin-left: 2rem;
-  margin: 3rem;
-
-  ${props => props.theme.flexCenter};
-
-  ${breakpoint.tabletPortrait`
-    display: none;
-  `};
-`;
-
-const Image = styled.img`
-  margin-left: 2rem;
-  width: 100%;
-`;
-
 const Items = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 33fr 33fr 33fr;
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
+  margin-top: 4rem;
 
   ${breakpoint.tabletPortrait`
     grid-template-columns: auto;
@@ -67,9 +51,6 @@ const Programs = () => (
         ))}
       </Items>
     </Text>
-    <ImageWrapper>
-      <Image src={image} alt="dumbbells" />
-    </ImageWrapper>
   </Section>
 );
 

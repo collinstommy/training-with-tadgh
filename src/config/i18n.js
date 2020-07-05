@@ -10,12 +10,6 @@ export default {
     header: 'Our Programs',
     list: [
       {
-        icon: 'user-friends',
-        title: '1 to 1 sessions',
-        details:
-          'In person training tailored to meet your needs. Driven by your goals. Scientific approach.'
-      },
-      {
         icon: 'laptop',
         title: 'Online Consultation',
         details:
