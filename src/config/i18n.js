@@ -43,7 +43,7 @@ export default {
     packages: [
       {
         title: 'Part Time Online',
-        price: 50,
+        price: 60,
         time: 'month',
         details: [
           '3 days of programming a week',
