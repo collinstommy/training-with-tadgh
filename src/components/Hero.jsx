@@ -67,6 +67,23 @@ const Text = styled.div`
   `};
 `;
 
+const Follow = styled.a`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.75rem;
+  p {
+    color: ${props => props.theme.lightest};
+  }
+`;
+
+const Icon = styled.img`
+  height: 2rem;
+  margin: 1rem;
+`;
+
 export default () => (
   <Container>
     <Navigation />
@@ -78,5 +95,9 @@ export default () => (
       <Subtitle>{subtitle}</Subtitle>
       <StyledCta type="secondary" to="/contact">{ctaText}</StyledCta>
     </Text>
+    <Follow href="https://www.instagram.com/tc_program/">
+      <Icon src="https://res.cloudinary.com/dmfebxjzk/image/upload/v1593968661/tadgh%20website/unnamed.png" alt="instagram icon" />
+      <p>Follow us on Instagram</p>
+    </Follow>
   </Container>
 );
