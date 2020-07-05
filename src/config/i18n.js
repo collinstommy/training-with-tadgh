@@ -48,6 +48,17 @@ export default {
   pricing: {
     packages: [
       {
+        title: 'Part Time Online',
+        price: 50,
+        time: 'month',
+        details: [
+          '3 days of programming a week',
+          'Feedback through online platform',
+          'Nutritional Advice',
+          'Free 5k running plan'
+        ]
+      },
+      {
         title: 'Full Time Online',
         price: 100,
         time: 'month',
@@ -58,17 +69,6 @@ export default {
           'Free 5k running plan'
         ]
       },
-      {
-        title: 'Full Time Online',
-        price: 50,
-        time: 'month',
-        details: [
-          '3 days of programming a week',
-          'Feedback through online platform',
-          'Nutritional Advice',
-          'Free 5k running plan'
-        ]
-      }
     ]
   },
   team: {
