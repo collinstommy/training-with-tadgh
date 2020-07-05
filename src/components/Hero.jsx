@@ -73,7 +73,7 @@ export default () => (
     <Text>
       <Title>
         <span>TC </span>
-        <Highlight>Fitness </Highlight>
+        <Highlight>Program </Highlight>
       </Title>
       <Subtitle>{subtitle}</Subtitle>
       <StyledCta type="secondary" to="/contact">{ctaText}</StyledCta>
